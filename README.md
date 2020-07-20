@@ -1,8 +1,17 @@
 # nlp
+
 Natural Language Processing (COMP130141.01), 2019/2020, 1
+
 ## Author
+
 Zhongyu Chen
-## 考试内容
+
+## textbook
+
+* [Speech and Language Processing (3rd ed. draft)](http://web.stanford.edu/~jurafsky/slp3/)
+* [Natural Language Processing with Python](http://www.nltk.org/book/)
+
+## 课程考核
 
 项目40%+期末50%
 
@@ -10,7 +19,12 @@ Zhongyu Chen
 考试5题，两题任务导向型的语言建模，作业相关的题目（正则式、分本分类、词性转移概率计算/vitabi算法）
 题目：隐马尔可夫模型（找tag inference的最佳路径），句法分析（要画语法树，chart parser、recursive descent parser/自顶向下方法、移进规约分析，直接写出有效的结果，包括语法树+使用了的步骤），字符串处理、正则表达式
 
-## 题型
+* homework, 3~4 times,`10%`
+* python/nltk based
+* one project, `40%`, python, report & code
+* final exam, `50%`
+
+### 考试题型
 
 5题：各20分
 1. 正则表达式
@@ -19,7 +33,7 @@ Zhongyu Chen
 4. 给定任务
 5. 给定任务
 
-## 1. 正则表达式
+#### 1. 正则表达式
 
 
 1. \d 数字
@@ -58,13 +72,13 @@ Zhongyu Chen
 |                        选择
 ```
 
-## 2. 词性标注
+#### 2. 词性标注
 
 计算词频，再用viterbi
 N个标记，n个词
 1. 暴力N^n，vitebi是n*N^2
 
-## 3. 句法分析
+#### 3. 句法分析
 
 有同学问句法分析的答题要求。
 递归下降画句法树，移进归约给出移进和归约的操作序列和最终句法树，CYK画出表格（上三角）和句法分析树，Chart画出完整的线图和句法树
@@ -75,7 +89,7 @@ N个标记，n个词
 3. WFST/CYK
 4. chart算法
 
-## 4. 给定任务
+#### 4. 给定任务
 
 
 古代文献的恢复：nlp处理过程，如何建立语料，然后怎么恢复，建立模型
@@ -90,4 +104,68 @@ N个标记，n个词
 
 1. 淘宝假评价
 2. 代码查重
+
+### 课程项目
+
+过时语料：http://ngrams.googlelabs.com/
+现代语料：wiki打包好的语料
+现代中文语料：搜狗的，中文的wiki
+
+
+1. 自己选题，创意很重要？？？？？？？？？？？？
+2. 数据集很重要
+3. 展示结果
+4. 图表，词云，注意力图等
+5. 结果分析：做得好的原因、不够好的地方和原因、怎么样能做的更好？
+6. 参考文献标注、引用的图要标注
+7. 结论，然后总结：做成什么样了，有什么不足，可以怎么改进？
+
+
+问题描述
+关键词
+总体思路
+具体过程：建立语料、数据集、模型、结果
+总结和改进
+感想
+参考文献
+附加文件
+
+
+背景介绍
+数据来源：数据量要大（10000篇？）、数据清洗、文本分析
+（数据分析+数据生成）
+展示结果？？？
+
+
+要求：处理对象为文本或者部分为文本。用传统nlp方法或者dl方法均可。
+用python实现。
+上传源代码，技术报告（5000字以上），必要的数据（如有开源数据给出link即可）。
+技术报告需说明选题动机，数据获取过程，算法或方法，实验结果（包括可视化的图表），结论和感想等。
+独立完成，在期末考试占比40%。
+为杜绝抄袭现象，部分论文拟进行查重。
+pj要求字数5000字以上。评分依据是任务的新颖性，过程的逻辑性，结果及分析的可信度。
+
+
+选题：
+1. 关键词提取，什么国家、什么问题、什么形容词语，什么特点？
+2. 情感分析？
+3. 摘要生成？关键词提取排序
+4. 问答系统？
+5. 文本生成？保留风格？LSTM,bert?
+6. 文本主题建模模型LDA，gensim里面有lda model？
+7. 参考gpt-2可以做些什么东西？很好的生成模型：基于transformer的bert、gpt-2
+
+
+爬取：selenium+chromedriver
+19900224,CBS: Interview with Connie Chung and Donald Trump
+20191231, Press Gaggle: Donald Trump Speaks to the Press on New Years' Eve 2020
+
+数量2600
+
+清理text里们的中括号
+[Billion]
+
+
+
+tensorboard --logdir=log --bind_all
 
